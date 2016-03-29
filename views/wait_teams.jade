@@ -3,8 +3,12 @@ extends layout
 block content
 
 	h1.page-title #{room.id}
-	h1.page-title Waiting for teams...
-	h1.page-title round #{room.current_round.round} / #{room.max_rounds}
+
+	if room.current_round.round > room.max_rounds
+		h1.page-title Game Over
+	else
+		h1.page-title Waiting for teams...
+		h1.page-title round #{room.current_round.round} / #{room.max_rounds}
 
 	.container
 		.row#teams

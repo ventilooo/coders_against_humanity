@@ -23,6 +23,7 @@ install:
 	npm install
 
 populate:
+	nodejs ./loadCards.js csg_cah rooms drop
 	nodejs ./loadCards.js csg_cah cards drop
 	nodejs ./loadCards.js csg_cah cards data/csgames2016.json
 
